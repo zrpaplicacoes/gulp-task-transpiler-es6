@@ -1,0 +1,17 @@
+{
+    "name": "es6_transpiler",
+    "version": "0.0.1",
+    "description": "Transpiler for ES6 to ES5",
+    "author": "ZRP",
+    "license": "ISC",
+      "dependencies": {
+        "gulp": "^3.9.1",
+        "gulp-babel": "^5.1.0",
+        "gulp-sourcemaps": "1.6.0",
+        "gulp-concat": "^2.6.0",
+        "gulp-wrap-commonjs": "^0.1.13",
+        "gulp-uglify": "^1.5.1",
+        "gulp-jade": "^1.0.1",
+        "babel": "~5.8.12"
+      }
+}
