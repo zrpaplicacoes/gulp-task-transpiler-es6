@@ -3,13 +3,13 @@
 ## Requirements:
   - nodejs: https://nodejs.org/en/download/package-manager/
 
-We will be using nodejs to run our package.json in order to get all the files needed to the transpiler.
+We will use nodejs to run our package.json in order to get all the files needed to the transpiler.
 You can use this transpiler without running the installation proccess, however you will need to handle your dependencies.
 
 
 ## Installation
 
-To install gulp and hist dependencies, simply run:
+To install gulp and other dependencies, simply run:
 
 ```npm install```
 
@@ -22,6 +22,9 @@ To start the process simply run:
 ``` node node_modules/gulp/bin/gulp ```
 
 The task will be executed everytime that you save an es6 file automagically.
+
+## Stopping gulp
+
 Hit ```ctrl + c ``` to stop the process.
 
 ## Configuration
