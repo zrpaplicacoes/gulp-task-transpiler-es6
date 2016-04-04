@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
     babel = require('gulp-babel'),
-    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify'),
     commonjsWrap = require('gulp-wrap-commonjs'),
     concat = require('gulp-concat');
 
@@ -11,8 +11,7 @@ var paths = {
 
 gulp.task('babel:es6', function() {
   return gulp.src(paths.es6Paths)
-      .pipe(sourcemaps.init())
-      .pipe(babel({modules: 'common', moduleIds: true, moduleRoot: ''}))
+      .pipe(babel({presets: ['es2015']}))
       .pipe(
           commonjsWrap({
             autoRequire: false,
@@ -24,8 +23,8 @@ gulp.task('babel:es6', function() {
             }
           })
       )
+      .pipe(uglify())
       .pipe(concat('build.js'))
-      .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.jsPaths));
 });
 

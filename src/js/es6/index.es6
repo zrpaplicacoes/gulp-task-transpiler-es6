@@ -5,7 +5,7 @@ export default class Index {
 
 	_createAlert() {
 		(() => {
-			alert("Arrow functions and classes both working!");
+			alert(`The class ${this.constructor.name} is working!`);
 		})();
 	}
 }
