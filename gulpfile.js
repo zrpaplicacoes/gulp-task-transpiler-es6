@@ -25,7 +25,7 @@ gulp.task('babel:es6', function() {
             }
           })
       )
-      // Uncomment this line if your code will be shown in production.
+      // Uncomment this line if your code will be used in production.
       // For dev and debugg proposes, let this commented
       // Or use something like https://www.npmjs.com/package/gulp-env
       // .pipe(uglify())
