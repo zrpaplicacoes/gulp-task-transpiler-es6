@@ -32,4 +32,4 @@ In order to modify the folder in which your files are saved just change the vari
 
 ## Additional References
 
-- [ZRP Blog Post]("http://labs.zrp.com.br/2016/04/04/transpilando-ecma-6-para-ecma-5/")
+- [ZRP Blog Post](http://labs.zrp.com.br/2016/04/04/transpilando-ecma-6-para-ecma-5/)
