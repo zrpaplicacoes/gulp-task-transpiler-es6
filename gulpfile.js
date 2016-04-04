@@ -6,10 +6,10 @@ var gulp = require('gulp'),
 
 var paths = {
     es6Paths: ['src/js/**/*.es6'],
-    jsPaths: 'src/js/builds/build.js',
+    jsPaths: 'src/js/builds',
 };
 
-gulp.task('babel:components', function() {
+gulp.task('babel:es6', function() {
   return gulp.src(paths.es6Paths)
       .pipe(sourcemaps.init())
       .pipe(babel({modules: 'common', moduleIds: true, moduleRoot: ''}))
@@ -18,19 +18,19 @@ gulp.task('babel:components', function() {
             autoRequire: false,
             pathModifier: function (path) {
               path = path.replace(/.js$/, '')
-                      .replace(/^.*\/components/, 'components')
+                      .replace(/^.*\/es6/, 'components')
 
               return path;
             }
           })
       )
-      .pipe(concat('components.build.js'))
+      .pipe(concat('build.js'))
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(paths.jsPaths));
 });
 
 gulp.task('js:compiler', function() {
-  gulp.watch([paths.es6Paths], ['babel:components']);
+  gulp.watch([paths.es6Paths], ['babel:es6']);
 });
 
-gulp.task('default', ['js:compiler', 'babel:components']);
+gulp.task('default', ['js:compiler', 'babel:es6']);

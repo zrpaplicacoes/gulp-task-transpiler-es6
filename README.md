@@ -6,7 +6,6 @@
 We will use nodejs to run our package.json in order to get all the files needed to the transpiler.
 You can use this transpiler without running the installation proccess, however you will need to handle your dependencies.
 
-
 ## Installation
 
 To install gulp and other dependencies, simply run:

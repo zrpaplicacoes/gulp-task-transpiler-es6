@@ -11,7 +11,6 @@
         "gulp-concat": "^2.6.0",
         "gulp-wrap-commonjs": "^0.1.13",
         "gulp-uglify": "^1.5.1",
-        "gulp-jade": "^1.0.1",
         "babel": "~5.8.12"
       }
 }
