@@ -1,1 +1,39 @@
-require.register("components/index",function(e,n,t){"use strict";function r(e,n){if(!(e instanceof n))throw new TypeError("Cannot call a class as a function")}Object.defineProperty(e,"__esModule",{value:!0});var i=function(){function e(e,n){for(var t=0;t<n.length;t++){var r=n[t];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}return function(n,t,r){return t&&e(n.prototype,t),r&&e(n,r),n}}(),o=function(){function e(){r(this,e)}return i(e,[{key:"build",value:function(){this._createAlert()}},{key:"_createAlert",value:function(){var e=this;!function(){alert("The class "+e.constructor.name+" is working!")}()}}]),e}();e["default"]=o});
+require.register("components/index", function(exports, require, module){
+  "use strict";
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Index = function () {
+	function Index() {
+		_classCallCheck(this, Index);
+	}
+
+	_createClass(Index, [{
+		key: "build",
+		value: function build() {
+			this._createAlert();
+		}
+	}, {
+		key: "_createAlert",
+		value: function _createAlert() {
+			var _this = this;
+
+			(function () {
+				alert("The class " + _this.constructor.name + " is working!");
+			})();
+		}
+	}]);
+
+	return Index;
+}();
+
+exports.default = Index;
+  
+});
+

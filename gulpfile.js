@@ -4,6 +4,8 @@ var gulp = require('gulp'),
     commonjsWrap = require('gulp-wrap-commonjs'),
     concat = require('gulp-concat');
 
+// Personalizate here the source and the destination path
+// according to your project
 var paths = {
     es6Paths: ['src/js/**/*.es6'],
     jsPaths: 'src/js/builds',
@@ -23,7 +25,10 @@ gulp.task('babel:es6', function() {
             }
           })
       )
-      .pipe(uglify())
+      // Uncomment this line if your code will be shown in production.
+      // For dev and debugg proposes, let this commented
+      // Or use something like https://www.npmjs.com/package/gulp-env
+      // .pipe(uglify())
       .pipe(concat('build.js'))
       .pipe(gulp.dest(paths.jsPaths));
 });
